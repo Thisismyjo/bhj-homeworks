@@ -5,6 +5,10 @@
   position: relative;
   font-family: Helvetica;
   font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dropdown__value {
@@ -48,6 +52,8 @@
 
 .dropdown__list_active {
   display: block;
+  
+  position: static;
 }
 
 .card {
