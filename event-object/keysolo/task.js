@@ -17,6 +17,16 @@ class Game {
   }
 
   registerEvents() {
+        
+    document.addEventListener("keypress", (e) => {
+      let symbol = this.currentSymbol.textContent.toLocaleLowerCase();
+      if(e.key.toLocaleLowerCase() === symbol) {
+        this.success();
+      } else {
+        this.fail();
+      }
+    });
+
     /*
       TODO:
       Написать обработчик события, который откликается
@@ -70,7 +80,10 @@ class Game {
         'popcorn',
         'cinema',
         'love',
-        'javascript'
+        'javascript',
+        'я js',
+        'программируй на js',
+        'смотри видео на youtube'
       ],
       index = Math.floor(Math.random() * words.length);
 
